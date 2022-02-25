@@ -1,35 +1,40 @@
-	Problem Statement :
-       Given an image, detect objects in the frame & predict their category class.
-      (Using Image Processing Method ) and also use Some Libraries. 
+     Problem Statement :
+	
+           Given an image, detect objects in the frame & predict their category class.
+             (Using Image Processing Method ) and also use Some Libraries. 
     
 
-	Objective :
-1-	Defining the classes of images from the data set .
-2-	Create a frame and determine  the object name from the class .
-3-	 Performance analysis to predict the objects using accuracy and error metrics .
-	Classifying  Images in Python:
+     Objective :
+	
+             1-	Defining the classes of images from the data set .
+             2-	Create a frame and determine  the object name from the class .
+             3-	 Performance analysis to predict the objects using accuracy and error metrics .
+		
+    Classifying  Images in Python:
+	
            From choosing profile photos on Facebook and Instagram to categorising  
            clothing images  in  shopping apps like Myntra, Amazon, and Flipkart, 
            image classification occurs everywhere    
-          on social media. Any e-commerce platform's classification has become an 
-          essential component.
-          
-          Image classification in machine learning is an example of lassifying clothing 
-          photos, which implies classifying the images into their proper category 
-          classes. We'll utilise the fashion mnist dataset that comes with TensorFlow  
-          to  get clothes images. Clothing photos from ten different categories are 
-          included in this dataset. It's a replacement for the MNIST dataset for 
-          beginners, which is made up of handwritten digits. As time goes on, we'll  
-         learn more about it.
+           on social media. Any e-commerce platform's classification has become an 
+           essential component.
+           
+           Image classification in machine learning is an example of lassifying clothing 
+           photos, which implies classifying the images into their proper category 
+           classes. We'll utilise the fashion mnist dataset that comes with TensorFlow  
+           to  get clothes images. Clothing photos from ten different categories are 
+           included in this dataset. It's a replacement for the MNIST dataset for 
+           beginners, which is made up of handwritten digits. As time goes on, we'll  
+           learn more about it.
 	
-	Solution :
-1-	Image read:-
-Image Processing (IP) is a type of computer technology that allows us to
-process, analyse, and extract information from images. 
-When it comes to image processing, Python has a lot of strong features. Let's look at how to process photos using several libraries such as ImageIO, OpenCV, Matplotlib, PIL, and others.
+    Solution :
+	
+           1-	Image read:-
+			
+          Image Processing (IP) is a type of computer technology that allows us to process, analyse, and extract information from images.  When it comes to image processing, Python has a lot of strong features. Let's look at how to process photos using several libraries such as ImageIO, OpenCV, Matplotlib, PIL, and others.
 
-      Example:- (Sample)
-1)	 Using OpenCV: OpenCV (Open Source Computer Vision) is a computer vision library that includes a number of methods for manipulating images and videos. It was created by Intel and later maintained by Willow Garage . This library is cross-platform, meaning it may be used with a variety of programming languages, including Python, C++, and others.
+           Example:- (Sample)
+			
+            1)	 Using OpenCV: OpenCV (Open Source Computer Vision) is a computer vision library that includes a number of methods for manipulating images and videos. It was created by Intel and later maintained by Willow Garage . This library is cross-platform, meaning it may be used with a variety of programming languages, including Python, C++, and others.
 
       # Python program to read image using OpenCV
  
@@ -54,9 +59,9 @@ When it comes to image processing, Python has a lot of strong features. Let's lo
  
  
 
-2-	Feature extraction:
-  #Here we extract the requires libraries based on our project
- # importing the necessary libraries
+   2-	Feature extraction:
+        #Here we extract the requires libraries based on our project
+        # importing the necessary libraries
        import tensorflow as tf
        import numpy as np
        import matplotlib.pyplot as plt
@@ -156,14 +161,14 @@ When it comes to image processing, Python has a lot of strong features. Let's lo
 
  4-Train test split for model building :-
   
-                #we will feed the x_train, y_train 
+              #we will feed the x_train, y_train 
              #The model.fit() method helps in fitting the training data into our 
              model.
              # Fitting the model to the training data
         cloth_model.fit(x_train, y_train, epochs=10)
  
-            # calculating loss and accuracy score
-       # we can see that the accuracy score on the testing data is less than that of 
+             # calculating loss and accuracy score
+             # we can see that the accuracy score on the testing data is less than that of 
               training data
        test_loss, test_acc = cloth_model.evaluate(x_test,
                                            y_test,
@@ -175,8 +180,8 @@ When it comes to image processing, Python has a lot of strong features. Let's lo
   
          //  Making predictions on trained model with test data
           
-             # We used predictions[0] to try to forecast the first test image, x test[0],
-          # using Softmax() function to convert
+      # We used predictions[0] to try to forecast the first test image, x test[0],
+      # using Softmax() function to convert
       # linear output logits to probability
       prediction_model = tf.keras.Sequential(
             [cloth_model, tf.keras.layers.Softmax()])
@@ -198,7 +203,7 @@ When it comes to image processing, Python has a lot of strong features. Let's lo
 
            # Finally, we'll compare the projected vs. real class labels for our    Given 
            Image .
-           # It determine how accurate our model is.
+          # It determine how accurate our model is.
           # assigning the figure size
       plt.figure(figsize=(15, 6))
       i = 0
@@ -240,7 +245,7 @@ When it comes to image processing, Python has a lot of strong features. Let's lo
 	OUTPUT:-
      
   
-#we get the good accuracy in this prediction
+#we get the good accuracy in this prediction of ML program
 The Given Image category is “Fashion Shirt Women” and As can be seen, the 12th, 17th, and 23rd predictions are incorrectly   categorised,  but the remainder of the predictions are right. We designed a good model because no classification model can be 100 percent accurate in reality.So, Performance analysis to predict the objects using accuracy and error metrics  is Successfully Completed.
 
 
